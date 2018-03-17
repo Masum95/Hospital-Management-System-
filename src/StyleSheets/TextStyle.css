@@ -1,0 +1,25 @@
+/* 
+    Created on : Nov 6, 2017, 1:51:25 PM
+    Author     : Masum Rahman
+*/
+
+.label-greenish{
+    -fx-font-size:15;
+    -fx-font-weight:bold;
+    -fx-text-fill: #00ffff;
+}
+
+.label-black{  
+    -fx-font-size:15;
+    -fx-font-weight:bold;
+    -fx-text-fill:#000000;
+}
+.textfield-round{
+    -fx-background-radius:15;
+    -fx-background-color:#ffffff;
+    -fx-font-size:15;
+}
+.textfield{
+    -fx-background-radius:5;
+    -fx-font-size:15;
+}

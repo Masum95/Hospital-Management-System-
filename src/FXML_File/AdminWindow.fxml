@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+
+
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <AnchorPane layoutX="36.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label layoutX="51.0" layoutY="184.0" text="Welcome" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold Italic" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="name" layoutX="28.0" layoutY="224.0" text="Admin" textFill="#ff7300">
+                            <font>
+                                <Font name="System Bold Italic" size="15.0" />
+                            </font>
+                        </Label>
+                        <VBox layoutY="293.0" prefHeight="228.0" prefWidth="215.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <JFXButton buttonType="RAISED" onAction="#doctorInfo" prefHeight="30.0" prefWidth="214.0" text="Doctor" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <graphic>
+                                        <MaterialDesignIconView fill="WHITE" glyphName="STETHOSCOPE" size="16" />
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" onAction="#patientInfo" prefHeight="30.0" prefWidth="214.0" text="Patient" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <graphic>
+                                        <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT" size="16" />
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" onAction="#employeesInfo" prefHeight="30.0" prefWidth="214.0" text="Other Employees" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <graphic>
+                                        <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT" size="16" />
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" onAction="#addEmployees" prefHeight="30.0" prefWidth="214.0" text="Add Employee" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <graphic>
+                                        <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_PLUS" size="18" />
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" onAction="#monitorHospital" prefHeight="30.0" prefWidth="214.0" text="Monitor Hospital" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="17.0" />
+                                    </font>
+                                    <graphic>
+                                        <MaterialDesignIconView fill="WHITE" glyphName="HOSPITAL" size="16" />
+                                    </graphic>
+                                </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="12.0" layoutY="182.0" onAction="#operationRequest" prefHeight="30.0" prefWidth="214.0" text="Operation Request" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="HOSPITAL" size="16" />
+                           </graphic>
+                        </JFXButton>
+                            </children>
+                            <padding>
+                                <Insets left="2.0" />
+                            </padding>
+                        </VBox>
+                        <ImageView fx:id="profilePic" fitHeight="152.0" fitWidth="188.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="12.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="340.0" layoutY="109.0" prefHeight="600.0" prefWidth="601.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <AnchorPane layoutY="-12.0" prefHeight="80.0" prefWidth="601.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <JFXButton buttonType="RAISED" layoutX="453.0" layoutY="37.0" onAction="#logout" ripplerFill="WHITE" style="-fx-background-color: #191970;" text="Logout" textFill="WHITE">
+                                    <graphic>
+                                        <MaterialDesignIconView fill="WHITE" glyphName="LOGOUT" />
+                                    </graphic>
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </JFXButton>
+                                <Label fx:id="WindowTitle" layoutX="48.0" layoutY="30.0" text="Monitor Hospital" textFill="#048f39">
+                                    <font>
+                                        <Font name="System Bold Italic" size="15.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="201.0" layoutY="209.0" prefHeight="520.0" prefWidth="601.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <AnchorPane fx:id="infoWindow" layoutX="5.0" layoutY="23.0" prefHeight="520.0" prefWidth="601.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <TableView fx:id="infoTable" editable="true" layoutX="5.0" layoutY="29.0" prefHeight="409.0" prefWidth="591.0" />
+                                        <JFXButton fx:id="viewDetailsBt" buttonType="RAISED" layoutX="461.0" layoutY="467.0" onAction="#viewDetails" prefHeight="31.0" prefWidth="111.0" style="-fx-background-color: #FF6347;" text="View Details" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="registrationWindow" prefHeight="520.0" prefWidth="601.0" style="-fx-background-color: #ffffff;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <JFXTabPane prefHeight="520.0" prefWidth="601.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <tabs>
+                                                <Tab text="General Info">
+                                                    <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                            <children>
+                                                                <GridPane hgap="10.0" prefHeight="434.0" prefWidth="592.0" vgap="10.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="0.0">
+                                                                    <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                            <children>
+                                                                                <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="First Name :" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0" />
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                        <TextField fx:id="firstName" prefHeight="35.0" prefWidth="166.0" GridPane.columnIndex="1" />
+                                                                        <TextField fx:id="lastName" prefHeight="36.0" prefWidth="193.0" GridPane.columnIndex="3" />
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                                            <children>
+                                                                                <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Blood Group :" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0" />
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                                            <children>
+                                                                                <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Address :" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0" />
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                                                            <children>
+                                                                                <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Last Name :" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0" />
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                                                            <children>
+                                                                                <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Date Of Birth :" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0" />
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                                                                            <children>
+                                                                                <HBox layoutX="14.0" layoutY="15.0" spacing="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                                                    <children>
+                                                                                        <ComboBox fx:id="division" layoutX="14.0" layoutY="15.0" onAction="#divisionCombo" prefHeight="25.0" prefWidth="122.0" promptText="Division" />
+                                                                                        <ComboBox fx:id="district" layoutX="208.0" layoutY="15.0" onAction="#districtCombo" prefHeight="25.0" prefWidth="133.0" promptText="District" />
+                                                                                        <ComboBox fx:id="thana" layoutX="167.0" layoutY="10.0" prefHeight="25.0" prefWidth="133.0" promptText="Thana" />
+                                                                                    </children>
+                                                                                </HBox>
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                        <Label prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Department" GridPane.rowIndex="4" />
+                                                                        <Label prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Basic Salary :" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                                        <TextField fx:id="salary" prefHeight="29.0" prefWidth="193.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                                                        <JFXDatePicker fx:id="birthDate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                                        <JFXComboBox fx:id="bloodGroup" prefHeight="25.0" prefWidth="124.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Label prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Bank AC" GridPane.rowIndex="5" />
+                                                                        <JFXComboBox fx:id="bankName" prefHeight="25.0" prefWidth="145.0" promptText="Bank Name" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                        <Label prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="AC No:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                                                        <TextField fx:id="acNo" prefHeight="28.0" prefWidth="193.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                                                        <JFXComboBox fx:id="department" onAction="#departmentCombo" prefHeight="25.0" prefWidth="153.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                    </children>
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="106.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="10.0" prefWidth="166.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="98.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="193.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                                <JFXButton buttonType="RAISED" layoutX="503.0" layoutY="445.0" onAction="#enrollEmployee" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #8B0000;" text="Enroll" textFill="WHITE">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="14.0" />
+                                                                    </font>
+                                                                </JFXButton>
+                                                                <Label fx:id="errorMsgEmployee" layoutX="29.0" layoutY="434.0" prefHeight="30.0" prefWidth="117.0" textFill="ORANGERED">
+                                                                    <font>
+                                                                        <Font name="System Bold Italic" size="15.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </Tab>
+                                                <Tab id="DoctorEntryTab" fx:id="DoctorRegiWindow" text="Doctor Info">
+                                                    <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                            <children>
+                                                                <GridPane hgap="10.0" layoutY="43.0" prefHeight="385.0" prefWidth="601.0" vgap="20.0" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0">
+                                                                    <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                            <children>
+                                                                                <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Designation" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0" />
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                        <TextField fx:id="designation" prefHeight="41.0" prefWidth="309.0" GridPane.columnIndex="1" />
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                                            <children>
+                                                                                <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Qualificaiton" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0" />
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                                                            <children>
+                                                                                <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Specialisation" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0" />
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                        <Label prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text=" Title " GridPane.rowIndex="2" />
+                                                                        <JFXComboBox fx:id="title" prefHeight="25.0" prefWidth="142.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <JFXButton buttonType="RAISED" onAction="#enrollDoctor" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #8B0000;" text="Enroll" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                                            <font>
+                                                                                <Font name="System Bold" size="14.0" />
+                                                                            </font>
+                                                                        </JFXButton>
+                                                                        <JFXComboBox fx:id="specialisation" prefHeight="25.0" prefWidth="178.0" GridPane.columnIndex="3" />
+                                                                        <TextField fx:id="qualification" prefHeight="42.0" prefWidth="468.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                                                                    </children>
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="109.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="10.0" prefWidth="164.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="102.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="183.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                    <padding>
+                                                                        <Insets right="15.0" />
+                                                                    </padding>
+                                                                </GridPane>
+                                                                <Label layoutY="14.0" prefHeight="21.0" prefWidth="150.0" style="-fx-text-fill: linear-gradient(to bottom, #AB4642, #282828);" text=" *Only For Doctors">
+                                                                    <font>
+                                                                        <Font name="System Bold Italic" size="15.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="errorMsgDoctor" layoutX="52.0" layoutY="434.0" prefHeight="30.0" prefWidth="117.0" textFill="ORANGERED">
+                                                                    <font>
+                                                                        <Font name="System Bold Italic" size="15.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </content>
+                                                </Tab>
+                                            </tabs>
+                                            <stylesheets>
+                                                <URL value="@../StyleSheets/TextStyle.css" />
+                                                <URL value="@../StyleSheets/ButtonStyle.css" />
+                                            </stylesheets>
+                                        </JFXTabPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="monitorHospitalWindow" prefHeight="520.0" prefWidth="601.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <GridPane layoutX="162.0" layoutY="185.0" prefHeight="372.0" prefWidth="501.0" AnchorPane.bottomAnchor="107.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="60.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#ambulance" prefHeight="68.0" prefWidth="220.0" ripplerFill="WHITE" style="-fx-background-color: #00ced1;" text="Ambulance">
+                                                    <graphic>
+                                                        <FontAwesomeIconView fill="WHITE" glyphName="AMBULANCE" size="20" />
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="System Bold" size="25.0" />
+                                                    </font>
+                                                </JFXButton>
+                                                <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#equipment" prefHeight="68.0" prefWidth="220.0" ripplerFill="WHITE" style="-fx-background-color: #00ced1;" text="Equipment" GridPane.columnIndex="1">
+                                                    <font>
+                                                        <Font name="System Bold" size="25.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="WHITE" glyphName="WRENCH" size="20" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="64.0" onAction="#manageWard" prefHeight="80.0" prefWidth="224.0" ripplerFill="WHITE" style="-fx-background-color: #00ced1;" text="Ward Management" GridPane.rowIndex="1">
+                                                    <font>
+                                                        <Font name="System Bold" size="21.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <FontAwesomeIconView fill="WHITE" glyphName="ALIGN_JUSTIFY" size="20" />
+                                                    </graphic>
+                                                </JFXButton>
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</fx:root>

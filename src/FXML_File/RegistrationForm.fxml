@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiController.RegistrationFormController">
+   <children>
+      <AnchorPane layoutX="69.0" layoutY="14.0" prefHeight="106.0" prefWidth="800.0" style="-fx-background-color: #000000;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="441.0" layoutY="26.0" prefHeight="50.0" prefWidth="214.0" text="Create Account As" textFill="WHITE">
+               <font>
+                  <Font name="Consolas Bold" size="22.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="accountAs" layoutX="676.0" layoutY="38.0" onAction="#comboChanged" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #ffffff;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="206.0" layoutY="386.0" prefHeight="50.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="647.0" layoutY="10.0" onAction="#register" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #40E0D0;" text="Register" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="50.0">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="ARROW_CIRCLE_ALT_RIGHT" size="16" />
+               </graphic>
+            </JFXButton>
+            <Label fx:id="errorMsg" layoutX="52.0" layoutY="17.0" prefHeight="21.0" prefWidth="304.0" textFill="#f20303">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="21.0" layoutY="107.0" prefHeight="442.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="patientWindow" prefHeight="442.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <GridPane hgap="10.0" layoutX="122.0" prefHeight="442.0" prefWidth="791.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="106.0" prefWidth="156.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="45.0" prefHeight="31.0" prefWidth="110.0" styleClass="label-black" text="First Name :" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <TextField fx:id="firstName" prefHeight="41.0" prefWidth="309.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="lastName" prefHeight="41.0" prefWidth="309.0" GridPane.columnIndex="3" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="User Name :" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Blood Group :" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Address :" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <children>
+                              <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Last Name :" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <TextField fx:id="pateintUserName" prefHeight="41.0" prefWidth="309.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Date Of Birth :" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="45.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                           <children>
+                              <HBox layoutX="14.0" layoutY="15.0" spacing="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <ComboBox fx:id="division" layoutX="14.0" layoutY="15.0" onAction="#divisionCombo" prefHeight="25.0" prefWidth="122.0" promptText="Division" />
+                                    <ComboBox fx:id="district" layoutX="208.0" layoutY="15.0" onAction="#districtCombo" prefHeight="25.0" prefWidth="136.0" promptText="District" />
+                                    <ComboBox fx:id="thana" layoutX="167.0" layoutY="10.0" prefHeight="25.0" prefWidth="136.0" promptText="Thana" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <Label prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Password" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="140.0" styleClass="label-black" text="Confirm Password" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXDatePicker fx:id="birthDate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <children>
+                              <Button fx:id="patientImage" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#ImageUpload" prefHeight="31.0" prefWidth="175.0" text="Upload Image">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="patImageName" layoutX="48.0" layoutY="47.0" prefHeight="19.0" prefWidth="156.0">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font></Label>
+                           </children>
+                        </AnchorPane>
+                        <JFXComboBox fx:id="bloodGroup" prefHeight="25.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <PasswordField fx:id="patientConfPassword" prefHeight="31.0" prefWidth="242.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <PasswordField fx:id="patientPassword" prefHeight="30.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Email" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="patientEmail" prefHeight="34.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="106.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="10.0" prefWidth="166.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="98.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="193.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="employeeWindow" prefHeight="442.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <GridPane hgap="10.0" layoutX="17.0" layoutY="26.0" prefHeight="385.0" prefWidth="760.0" AnchorPane.rightAnchor="20.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.0" minWidth="10.0" prefWidth="152.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.0" minWidth="10.0" prefWidth="241.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.0" minWidth="10.0" prefWidth="127.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.0" minWidth="10.0" prefWidth="222.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Employee ID">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Previous Password" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Username" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="empID" prefHeight="31.0" prefWidth="190.0" GridPane.columnIndex="1" />
+                        <Label text=" Password" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="empUserName" prefHeight="31.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <PasswordField fx:id="empPrevPassword" prefHeight="30.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <PasswordField fx:id="empPassword" prefHeight="30.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+                           <children>
+                              <Button fx:id="empImage" layoutX="25.0" layoutY="24.0" mnemonicParsing="false" onAction="#ImageUpload" prefHeight="37.0" prefWidth="140.0" text="Upload Image">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="empImgName" layoutX="65.0" layoutY="73.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label text="Email" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="empEmail" prefHeight="31.0" prefWidth="190.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <PasswordField fx:id="empConfPassword" prefHeight="30.0" prefWidth="190.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label prefHeight="21.0" prefWidth="155.0" text="Confirm Password" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

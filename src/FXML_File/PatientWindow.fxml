@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+                    <children>
+                        <AnchorPane fx:id="welcomePane" layoutX="36.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label layoutX="51.0" layoutY="184.0" text="Welcome" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold Italic" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="name" layoutX="28.0" layoutY="224.0" text="Admin" textFill="#ff7300">
+                                    <font>
+                                        <Font name="System Bold Italic" size="15.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fx:id="profilePic" fitHeight="152.0" fitWidth="188.0" layoutX="2.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                                <VBox layoutY="293.0" prefHeight="228.0" prefWidth="215.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                    <children>
+                                        <JFXButton buttonType="RAISED" onAction="#history" prefHeight="30.0" prefWidth="214.0" text="History" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="17.0" />
+                                            </font>
+                                            <graphic>
+                                                <OctIconView fill="WHITE" glyphName="HISTORY" size="16" />
+                                            </graphic>
+                                        </JFXButton>
+                                        <JFXButton buttonType="RAISED" onAction="#myAccount" prefHeight="30.0" prefWidth="214.0" text="My Account" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="17.0" />
+                                            </font>
+                                            <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT" size="16" />
+                                            </graphic>
+                                        </JFXButton>
+                                    </children>
+                                    <padding>
+                                        <Insets left="2.0" />
+                                    </padding>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="340.0" layoutY="109.0" prefHeight="600.0" prefWidth="601.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <AnchorPane fx:id="upperPane" layoutY="-12.0" prefHeight="80.0" prefWidth="601.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <JFXButton buttonType="RAISED" layoutX="453.0" layoutY="37.0" onAction="#logout" ripplerFill="WHITE" style="-fx-background-color: #191970;" text="Logout" textFill="WHITE">
+                                            <graphic>
+                                                <MaterialDesignIconView fill="WHITE" glyphName="LOGOUT" />
+                                            </graphic>
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </JFXButton>
+                                        <Label fx:id="WindowTitle" layoutX="48.0" layoutY="30.0" text="Monitor Hospital" textFill="#048f39">
+                                            <font>
+                                                <Font name="System Bold Italic" size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="201.0" layoutY="209.0" prefHeight="520.0" prefWidth="601.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                    <children>
+                                        <AnchorPane fx:id="infoWindow" layoutX="5.0" layoutY="23.0" prefHeight="520.0" prefWidth="601.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <TableView fx:id="infoTable" editable="true" layoutX="5.0" layoutY="84.0" prefHeight="354.0" prefWidth="591.0" />
+                                                <JFXButton buttonType="RAISED" layoutX="461.0" layoutY="467.0" onAction="#viewDetails" prefHeight="31.0" prefWidth="111.0" style="-fx-background-color: #FF6347;" text="View Details" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="15.0" />
+                                                    </font>
+                                                </JFXButton>
+                                                <JFXComboBox fx:id="historyAs" layoutX="405.0" layoutY="39.0" onAction="#historyAsCombo" prefHeight="25.0" prefWidth="148.0" promptText="History As" />
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane fx:id="MyAccountWindow" prefHeight="520.0" prefWidth="601.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <GridPane hgap="10.0" layoutX="22.0" layoutY="63.0" prefHeight="394.0" prefWidth="541.0" vgap="10.0">
+                                                    <children>
+                                                        <Label prefHeight="31.0" prefWidth="110.0" styleClass="label-black" text="Full Name :">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Blood Group :" GridPane.rowIndex="2">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label prefHeight="30.0" prefWidth="117.0" styleClass="label-black" text="Date Of Birth" GridPane.rowIndex="3">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="birthDate" prefHeight="31.0" prefWidth="176.0" styleClass="label-black" text="Full Name :" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="bloodGrp" prefHeight="31.0" prefWidth="110.0" styleClass="label-black" text="Full Name :" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="fullName" prefHeight="31.0" prefWidth="219.0" styleClass="label-black" text="Full Name :" GridPane.columnIndex="1">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label prefHeight="30.0" prefWidth="172.0" styleClass="label-black" text="Date Of Registration" GridPane.rowIndex="1">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="regiDate" prefHeight="31.0" prefWidth="110.0" styleClass="label-black" text="Full Name :" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="106.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="10.0" prefWidth="229.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="169.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="139.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                </GridPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</fx:root>

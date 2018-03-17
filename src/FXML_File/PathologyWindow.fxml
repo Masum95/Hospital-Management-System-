@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane>
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+               <children>
+                  <AnchorPane layoutX="36.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="51.0" layoutY="184.0" text="Welcome" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="name" layoutX="20.0" layoutY="224.0" text="Admin" textFill="#ff7300">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutY="293.0" prefHeight="228.0" prefWidth="215.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <padding>
+                              <Insets left="2.0" />
+                           </padding>
+                           <children>
+                              <JFXButton buttonType="RAISED" onAction="#reportRequest" prefHeight="30.0" prefWidth="214.0" text="Report Request" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                                 <graphic>
+                                    <OctIconView fill="WHITE" glyphName="QUESTION" size="16" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onAction="#pendingReport" prefHeight="30.0" prefWidth="214.0" text="Pending Report" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                                 <graphic>
+                                    <OctIconView fill="WHITE" glyphName="ISSUE_CLOSED" size="16" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onAction="#ReportHistory" prefHeight="30.0" prefWidth="214.0" text="Report History" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="17.0" />
+                                 </font>
+                                 <graphic>
+                                    <OctIconView fill="WHITE" glyphName="ISSUE_CLOSED" size="16" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                        <ImageView fx:id="profilePic" fitHeight="152.0" fitWidth="188.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="12.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="340.0" layoutY="109.0" prefHeight="600.0" prefWidth="601.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutY="-12.0" prefHeight="80.0" prefWidth="601.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" layoutX="453.0" layoutY="37.0" onAction="#logout" ripplerFill="WHITE" style="-fx-background-color: #191970;" text="Logout" textFill="WHITE">
+                                 <graphic>
+                                    <MaterialDesignIconView fill="WHITE" glyphName="LOGOUT" />
+                                 </graphic>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label fx:id="WindowTitle" layoutX="48.0" layoutY="30.0" text="Monitor Hospital" textFill="#048f39">
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="201.0" layoutY="209.0" prefHeight="520.0" prefWidth="601.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="infoWindow" layoutX="5.0" layoutY="23.0" prefHeight="520.0" prefWidth="601.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TableView fx:id="infoTable" editable="true" layoutX="5.0" layoutY="50.0" prefHeight="400.0" prefWidth="591.0" />
+                                    <JFXButton fx:id="detailsBtn" buttonType="RAISED" layoutX="454.0" layoutY="467.0" onAction="#viewDetails" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #FF6347;" text="View Details" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                       <graphic>
+                                          <OctIconView fill="WHITE" glyphName="CLIPPY" size="16" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
+    </children>
+</fx:root>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane id="AnchorPane" prefHeight="296.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <JFXDatePicker fx:id="datePicker" layoutX="310.0" layoutY="25.0" onAction="#dateSelected" />
+                <Text fx:id="serial" layoutX="53.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serial ">
+                    <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                    </font>
+                </Text>
+                <JFXButton fx:id="appointment" buttonType="RAISED" layoutX="372.0" layoutY="227.0" onAction="#makeAppointment" prefHeight="41.0" prefWidth="129.0" style="-fx-background-color: #32CD32;" text="Make Appointment" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </JFXButton>
+            <VBox layoutX="23.0" layoutY="37.0" spacing="10.0">
+               <children>
+                      <TextField fx:id="patientID" promptText="Your Patient ID" />
+                  <TextField fx:id="username" promptText="Your Username" />
+                  <PasswordField fx:id="password" promptText="Your Password" />
+               </children>
+            </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</fx:root>

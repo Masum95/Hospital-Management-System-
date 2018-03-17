@@ -1,0 +1,57 @@
+
+/* 
+    Created on : Nov 5, 2017, 3:26:59 AM
+    Author     : Masum Rahman
+*/
+.button{
+    -fx-background-size:100% 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center;
+    -fx-effect: dropshadow(three-pass-box,#000000 , 25, 0, 5, 5);
+}
+.button:pressed {
+    -fx-background-color: #3e8e41;
+    -fx-box-shadow: 0 5px #666;
+    -fx-translate-y:4;
+}
+.roundButton{
+    -fx-background-color:linear-gradient(to bottom, #4CA1AF, #C4E0E5);
+    -fx-padding:4;
+    -fx-font-size:20;
+    -fx-text-fill:#ffffff;
+    -fx-font-weight : 700;
+    -fx-background-radius:30;
+    -fx-effect: dropshadow(three-pass-box,#000000 , 25, 0, 5, 5);
+    -fx-box-shadow: 0 9px #999;
+}
+
+.button-login{
+    -fx-background-image: url("../Images/login.png");
+    -fx-background-radius: 50;
+}
+
+.button-home{
+    -fx-background-image: url("../Images/home_icon.png");
+    -fx-background-radius: 15;
+}
+
+.button-register{
+    -fx-background-image: url("../Images/register.png");
+    -fx-background-size:100% 100%;
+    -fx-background-radius: 25;
+}
+.button:hover{
+    -fx-background-color:linear-gradient(to bottom, #6190E8, #A7BFE8);
+}
+
+.buttonTransparent{
+    -fx-background-position: center; 
+    -fx-background-color: transparent;
+    -fx-background-radius:30;
+    -fx-border-color : #ffffff;
+    -fx-border-radius : 30;
+}
+
+.tab-x-label{
+    -fx-rotate: 90;
+}

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+            <tabs>
+                <Tab text="Medicine Content">
+                    <content>
+                        <AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="601.0" style="-fx-background-color: #ffffff; -fx-border-color: #4a8cf7; -fx-border-radius: 0; -fx-border-width: 5;">
+                            <children>
+                                <GridPane alignment="CENTER" hgap="5.0" layoutX="14.0" layoutY="26.0" prefHeight="459.0" prefWidth="579.0" vgap="2.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="21.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="394.0" minWidth="10.0" prefWidth="223.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="546.0" minWidth="10.0" prefWidth="341.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="430.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="465.0" minHeight="10.0" prefHeight="317.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <AnchorPane prefHeight="93.0" prefWidth="582.0" GridPane.columnSpan="2">
+                                            <children>
+                                                <GridPane layoutX="468.0" layoutY="3.0" prefHeight="45.0" prefWidth="311.0" AnchorPane.rightAnchor="0.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2">
+                                                            <children>
+                                                                <Text fx:id="doctorName" layoutX="24.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor">
+                                                                    <font>
+                                                                        <Font name="System Bold Italic" size="18.0" />
+                                                                    </font>
+                                                                </Text>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                            <children>
+                                                                <Text fx:id="qualification" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualification" wrappingWidth="224.13671875">
+                                                                    <font>
+                                                                        <Font name="System Italic" size="15.0" />
+                                                                    </font>
+                                                                </Text>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </GridPane>
+                                                <Text layoutX="23.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :">
+                                                    <font>
+                                                        <Font name="System Bold" size="15.0" />
+                                                    </font>
+                                                </Text>
+                                                <Text fx:id="date" layoutX="86.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                                                    <font>
+                                                        <Font name="System Bold" size="13.0" />
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                            <children>
+                                                <GridPane hgap="10.0" layoutX="25.0" layoutY="18.0" prefHeight="126.0" prefWidth="394.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="83.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="120.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Label prefHeight="17.0" prefWidth="82.0" text="Patient Name:">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="patientName" text="Patient Name:" GridPane.columnIndex="1">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="patientID" text="id" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label text="Age :" GridPane.rowIndex="2">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label text="Patient ID" GridPane.rowIndex="1">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="age" text="age" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <GridPane gridLinesVisible="true" prefHeight="94.0" prefWidth="341.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="13.0" text="Pulse ">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="pulse" layoutX="57.0" layoutY="9.0" prefHeight="25.0" prefWidth="57.0" />
+                                                        <Label layoutX="136.0" layoutY="13.0" text="bpm" />
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                    <children>
+                                                        <Button fx:id="history" layoutX="49.0" layoutY="9.0" mnemonicParsing="false" onAction="#showPatientHistory" text="Patient's History" />
+                                                    </children>
+                                                </AnchorPane>
+                                                <Label text="Clinical Finding;">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="13.0" text="BP">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="bpLow" layoutX="57.0" layoutY="9.0" prefHeight="25.0" prefWidth="29.0" />
+                                                        <Label layoutX="168.0" layoutY="11.0" prefHeight="17.0" prefWidth="38.0" text="mmHg" AnchorPane.rightAnchor="14.0" />
+                                                        <TextField fx:id="bpHigh" layoutX="126.0" layoutY="7.0" prefHeight="11.0" prefWidth="29.0" AnchorPane.rightAnchor="65.0" />
+                                                        <Label layoutX="103.0" layoutY="11.0" text="/">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                    <children>
+                                                        <Label layoutY="14.0" text="Blood Glucose">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="glucoseLevel" layoutX="101.0" layoutY="11.0" prefHeight="25.0" prefWidth="32.0" AnchorPane.rightAnchor="39.0" />
+                                                        <Label layoutX="163.0" layoutY="15.0" text="ppm" AnchorPane.rightAnchor="9.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="13.0" text="Weight">
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="weight" layoutX="75.0" layoutY="9.0" prefHeight="25.0" prefWidth="39.0" />
+                                                        <Label layoutX="136.0" layoutY="13.0" text="kg" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </GridPane>
+                                        <AnchorPane prefHeight="319.0" prefWidth="584.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                            <children>
+                                                <GridPane fx:id="medicineGrid" hgap="10.0" layoutX="190.0" layoutY="226.0" prefHeight="74.0" prefWidth="569.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="226.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+                                                            <children>
+                                                                <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upto">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="16.0" />
+                                                                    </font>
+                                                                </Text>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                            <children>
+                                                                <Text layoutX="20.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine Name">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="16.0" />
+                                                                    </font>
+                                                                </Text>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                                            <children>
+                                                                <Text layoutX="39.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="16.0" />
+                                                                    </font>
+                                                                </Text>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                            <children>
+                                                                <TextField fx:id="medicineName" layoutX="-1.0" layoutY="25.0" prefHeight="25.0" prefWidth="185.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <HBox alignment="CENTER" prefHeight="28.0" prefWidth="133.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                            <children>
+                                                                <TextField fx:id="morning" prefHeight="25.0" prefWidth="36.0" />
+                                                                <Label text="+">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="19.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <TextField fx:id="noon" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="36.0" />
+                                                                <Label layoutX="46.0" layoutY="10.0" text="+">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="19.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <TextField fx:id="night" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="36.0" />
+                                                            </children>
+                                                        </HBox>
+                                                        <TextField fx:id="comment" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                        <AnchorPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                            <children>
+                                                                <TextField fx:id="upto" layoutY="25.0" prefHeight="25.0" prefWidth="50.0" />
+                                                                <JFXButton buttonType="RAISED" layoutX="111.0" layoutY="25.0" onAction="#addMedicine" prefHeight="25.0" prefWidth="45.0" style="-fx-background-color: #1a2778;" text="Add" textFill="WHITE">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                    </font>
+                                                                </JFXButton>
+                                                                <Text layoutX="59.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="day(s)" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </GridPane>
+                                                <TableView fx:id="medicineTable" layoutX="14.0" layoutY="4.0" prefHeight="215.0" prefWidth="764.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="5.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="medicineNameCol" minWidth="-1.0" prefWidth="119.0" text="Medicine" />
+                                                        <TableColumn fx:id="dosageInstructionCol" minWidth="0.0" prefWidth="131.0" />
+                                                        <TableColumn fx:id="dosageCmntsCol" minWidth="-1.0" prefWidth="163.0" text="Comments" />
+                                                        <TableColumn fx:id="drugUptoCol" minWidth="-1.0" prefWidth="169.0" text="To Be Continued (Days) " />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Diagnosis Content">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane fx:id="testGrid" alignment="CENTER" layoutY="234.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="315.0" prefWidth="800.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="234.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="198.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="192.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="226.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="155.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="20.0" prefWidth="333.0" text="Investigation Request For Pathology Department" textFill="#9e6565" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                                            <children>
+                                                <Text layoutX="28.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test Name">
+                                                    <font>
+                                                        <Font name="System Bold" size="16.0" />
+                                                    </font>
+                                                </Text>
+                                                <TextField fx:id="diagnosisTestName" layoutX="22.0" layoutY="53.0" prefHeight="35.0" prefWidth="567.0" />
+                                            </children>
+                                        </AnchorPane>
+                                        <JFXButton buttonType="RAISED" onAction="#addDiagnosisTest" prefHeight="29.0" prefWidth="76.0" style="-fx-background-color: #1a2778;" text="Add" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </GridPane>
+                                <TableView fx:id="diagnosisTable" layoutY="26.0" prefHeight="193.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                    <columns>
+                                        <TableColumn fx:id="diagnosisTestIDCol" prefWidth="154.0" text="Test ID" />
+                                        <TableColumn fx:id="diagnosisTestNameCol" minWidth="0.0" prefWidth="416.0" text="Test Name" />
+                                        <TableColumn fx:id="diagnosisTestCostCol" prefWidth="109.0" text="Cost" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Surgery">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="surgeryTable" layoutY="22.0" prefHeight="183.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                    <columns>
+                                        <TableColumn fx:id="surgeryIDCol" prefWidth="158.0" text="Surgery ID" />
+                                        <TableColumn fx:id="surgeryNameCol" minWidth="0.0" prefWidth="326.0" text="Surgery Name" />
+                                        <TableColumn fx:id="surgeryDeptCol" minWidth="0.0" prefWidth="231.0" text="Department" />
+                                    </columns>
+                                </TableView>
+                                <GridPane fx:id="surgeryGrid" alignment="CENTER" layoutY="223.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="315.0" prefWidth="800.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="198.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="192.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="239.0" minWidth="10.0" prefWidth="226.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="155.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label prefHeight="20.0" prefWidth="255.0" text="Surgery Request" textFill="#9e6565" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                                            <children>
+                                                <Text layoutX="28.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surgery Name">
+                                                    <font>
+                                                        <Font name="System Bold" size="16.0" />
+                                                    </font>
+                                                </Text>
+                                                <JFXButton buttonType="RAISED" layoutX="630.0" layoutY="65.0" onAction="#addSurgery" prefHeight="29.0" prefWidth="76.0" style="-fx-background-color: #1a2778;" text="Add" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </JFXButton>
+                                                <TextField fx:id="surgeryName" layoutX="28.0" layoutY="53.0" prefHeight="33.0" prefWidth="543.0" />
+                                            </children>
+                                        </AnchorPane>
+                                        <JFXButton buttonType="RAISED" onAction="#save" prefHeight="29.0" prefWidth="76.0" style="-fx-background-color: #A52A2A;" text="Save" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </JFXButton>
+                                        <JFXButton buttonType="RAISED" onAction="#viewSurgeryDetails" prefHeight="29.0" prefWidth="105.0" style="-fx-background-color: #1a2778;" text="View Details" textFill="WHITE" GridPane.columnIndex="3">
+                                            <font>
+                                                <Font name="System Bold" size="12.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </JFXTabPane>
+    </children>
+</fx:root>

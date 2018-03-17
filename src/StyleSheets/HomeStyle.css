@@ -1,0 +1,53 @@
+
+/* 
+    Created on : Nov 4, 2017, 6:41:31 PM
+    Author     : Masum Rahman
+*/
+
+.background{
+    -fx-background-image : url("../Images/HomePageImage.JPG");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 100% 100%;
+
+}
+
+.imageview{
+    -fx-background-size: 100% 100%;    
+}
+
+.tab-header-background {
+    -fx-background-color:linear-gradient(to bottom, #AB4642, #282828);
+}
+
+.tab-pane {
+    -fx-background-color : white;
+    -fx-tab-min-width:120px;
+    -fx-tab-max-width:120px;
+    -fx-tab-min-height:35px;
+    -fx-tab-max-height:35px;
+
+}
+.tab-label{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15;
+    -fx-font-weight : bold;
+    -fx-font-family: Arial;
+}
+
+.tab {
+    -fx-background-color: transparent;
+    -fx-border-width: 0.5px;
+    -fx-border-color:#000000;
+    -fx-border-radius: 5;
+}
+
+.tab:hover{
+    -fx-background-color:  linear-gradient(to bottom, #616161, #9bc5c3);
+}
+.tab:selected {
+    -fx-background-color:linear-gradient(to bottom, #4CA1AF, #C4E0E5);
+}
+
+.tab-x-label{
+    -fx-rotate: 90;
+}

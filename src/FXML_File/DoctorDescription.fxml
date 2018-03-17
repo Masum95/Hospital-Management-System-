@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<fx:root prefHeight="486.0" prefWidth="657.0" style="-fx-background-color: #ffffff;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <GridPane layoutX="20.0" layoutY="20.0" prefHeight="533.0" prefWidth="761.0" styleClass="label-black" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="20.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="375.0" minWidth="10.0" prefWidth="261.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="500.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="166.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="131.0" minHeight="0.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="298.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="345.0" minHeight="10.0" prefHeight="169.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <ImageView fx:id="image" fitHeight="159.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true" />
+                        <AnchorPane GridPane.columnIndex="1">
+                            <children>
+                                <Label fx:id="name" layoutX="8.0" layoutY="70.0" text="Name">
+                                    <font>
+                                        <Font name="System Bold Italic" size="28.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="isOnLeave" layoutX="345.0" layoutY="14.0" />
+                            </children>
+                        </AnchorPane>
+                        <Label styleClass="label-greenish" text="Designation" GridPane.rowIndex="1" />
+                        <Label styleClass="label-greenish" text="Degree/Qualification" GridPane.rowIndex="2" />
+                        <Label styleClass="label-greenish" text="Department" GridPane.rowIndex="3" />
+                        <Label fx:id="Designation" styleClass="label-black" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="qualification" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="Department" styleClass="label-black" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <AnchorPane prefHeight="221.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <children>
+                                <JFXButton layoutX="246.0" layoutY="165.0" onAction="#makeAppointment" prefHeight="31.0" prefWidth="184.0" style="-fx-background-color: #008B8B;" text="Make An Appointment" textFill="WHITE" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </GridPane>
+            </children>
+            <stylesheets>
+                <URL value="@../StyleSheets/TextStyle.css" />
+                <URL value="@../StyleSheets/ButtonStyle.css" />
+            </stylesheets>
+        </AnchorPane>
+    </children>
+</fx:root>

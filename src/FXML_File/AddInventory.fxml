@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <TableView fx:id="infoTable" layoutX="11.0" layoutY="46.0" prefHeight="294.0" prefWidth="574.0" />
+                <HBox layoutX="21.0" layoutY="350.0" prefHeight="29.0" prefWidth="414.0" spacing="10.0">
+                    <children>
+                        <TextField fx:id="txtFld1" prefHeight="25.0" prefWidth="123.0" />
+                        <TextField fx:id="txtFld2" prefHeight="25.0" prefWidth="127.0" />
+                        <TextField fx:id="txtFld3" prefHeight="25.0" prefWidth="141.0" />
+                    </children>
+                </HBox>
+                <HBox layoutX="451.0" layoutY="350.0" spacing="10.0" />
+                  <JFXButton buttonType="RAISED" layoutX="497.0" layoutY="350.0" onAction="#add" prefHeight="29.0" prefWidth="67.0" ripplerFill="WHITE" style="-fx-background-color: #285c81;" text="Add" textFill="WHITE">
+                      <font>
+                          <Font name="System Bold Italic" size="13.0" />
+                      </font>
+                  </JFXButton>
+            </children>
+        </AnchorPane>
+    </children>
+</fx:root>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+         <AnchorPane id="AnchorPane" prefHeight="374.0" prefWidth="402.0" style="-fx-background-color: #383838;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+            <GridPane layoutX="14.0" layoutY="110.0" prefHeight="155.0" prefWidth="347.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="95.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="252.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label styleClass="label-greenish" text="ID" />
+                      <Label styleClass="label-greenish" text="Username" GridPane.rowIndex="1" />
+                      <Label styleClass="label-greenish" text="Password" GridPane.rowIndex="2" />
+                  <TextField fx:id="userID" prefHeight="55.0" prefWidth="252.0" styleClass="textfield-round" GridPane.columnIndex="1" />
+                      <TextField fx:id="userName" prefHeight="43.0" prefWidth="252.0" styleClass="textfield-round" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                      <PasswordField fx:id="password" prefHeight="42.0" prefWidth="276.0" styleClass="textfield-round" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+                <Label fx:id="loginStatus" layoutX="25.0" layoutY="288.0" text="Login Failed" textFill="#ff1b1b">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            <JFXButton buttonType="RAISED" layoutX="275.0" layoutY="288.0" onAction="#login" style="-fx-background-color: #0747a6;" text="Login " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="LOGIN" size="17" />
+               </graphic>
+            </JFXButton>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="197.0" text="Don't Have An Account Yet" textFill="#1fd6ff">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="211.0" layoutY="35.0" mnemonicParsing="false" onAction="#register" styleClass="buttonTransparent" text="Register  Now" textFill="ORANGERED">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+    </children>
+   <stylesheets>
+      <URL value="@../StyleSheets/buttonStyle.css" />
+      <URL value="@../StyleSheets/TextStyle.css" />
+   </stylesheets>
+</fx:root>
